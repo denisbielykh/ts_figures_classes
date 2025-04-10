@@ -42,7 +42,7 @@ export class Circle implements Figure {
     public a: number,
   ) {
     if (a <= 0) {
-      throw new Error('Resulting value should be even number');
+      throw new Error('The value should be an even number greater than zero.');
     }
   }
 
@@ -62,7 +62,7 @@ export class Rectangle implements Figure {
     public b: number,
   ) {
     if (a <= 0 || b <= 0) {
-      throw new Error('Resulting value should be even number');
+      throw new Error('The value should be an even number greater than zero.');
     }
   }
 
