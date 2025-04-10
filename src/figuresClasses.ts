@@ -30,7 +30,7 @@ export class Triangle implements Figure {
     const s: number = (a + b + c) / 2;
     const trArea = Math.sqrt(s * (s - a) * (s - b) * (s - c));
 
-    return Math.trunc(trArea * 100) / 100;
+    return Math.floor(trArea * 100) / 100;
   }
 }
 
@@ -42,14 +42,14 @@ export class Circle implements Figure {
     public a: number,
   ) {
     if (a <= 0) {
-      throw new Error('Not correct value');
+      throw new Error('Resulting value should be even number');
     }
   }
 
   getArea(): number {
     const circleArea = Math.PI * this.a ** 2;
 
-    return Math.trunc(circleArea * 100) / 100;
+    return Math.floor(circleArea * 100) / 100;
   }
 }
 
@@ -62,14 +62,14 @@ export class Rectangle implements Figure {
     public b: number,
   ) {
     if (a <= 0 || b <= 0) {
-      throw new Error('Not correct value');
+      throw new Error('Resulting value should be even number');
     }
   }
 
   getArea(): number {
     const { a, b } = this;
 
-    return Math.trunc(a * b * 100) / 100;
+    return Math.floor(a * b * 100) / 100;
   }
 }
 
